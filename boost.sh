@@ -48,8 +48,8 @@ usage () {
 
 while [ "$1" != "" ]; do
     case $1 in
-        --with-c++11 ) CXX_FLAGS="-std=c++11 -stdlib=libc++"
-                        CXX_LINK_FLAGS="-stdlib=libc++"
+        --with-c++11 ) CXX_FLAGS="-std=gnu++11 -stdlib=libstdc++"
+                        CXX_LINK_FLAGS="-stdlib=libstdc++"
                     ;;
         clean ) CLEAN=1
                     ;;
@@ -72,9 +72,10 @@ done
 [ -z $VERSION ] && usage
 
 # these libraries must be built for target platform
-: ${BOOST_LIBS:="chrono context filesystem graph_parallel iostreams locale mpi program_options python regex serialization signals system thread timer wave"}
+#: ${BOOST_LIBS:="chrono context filesystem graph_parallel iostreams locale mpi program_options python regex serialization signals system thread timer wave"}
+: ${BOOST_LIBS:="serialization system filesystem"}
 # add optional libraries
-BOOST_LIBS="$BOOST_LIBS date_time graph math random test exception"
+#BOOST_LIBS="$BOOST_LIBS date_time graph math random test exception"
 
 # : ${BOOST_LIBS:="serialization"}
 # : ${BOOST_LIBS:="atomic chrono date_time exception filesystem graph graph_parallel iostreams locale mpi program_options python random regex serialization signals system test thread timer wave"}
