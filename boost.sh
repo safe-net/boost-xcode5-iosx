@@ -73,7 +73,7 @@ done
 
 # these libraries must be built for target platform
 #: ${BOOST_LIBS:="chrono context filesystem graph_parallel iostreams locale mpi program_options python regex serialization signals system thread timer wave"}
-: ${BOOST_LIBS:="serialization system filesystem"}
+: ${BOOST_LIBS:="serialization system filesystem test"}
 # add optional libraries
 #BOOST_LIBS="$BOOST_LIBS date_time graph math random test exception"
 
