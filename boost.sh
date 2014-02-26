@@ -48,8 +48,8 @@ usage () {
 
 while [ "$1" != "" ]; do
     case $1 in
-        --with-c++11 ) CXX_FLAGS="-std=gnu++11 -stdlib=libstdc++"
-                        CXX_LINK_FLAGS="-stdlib=libstdc++"
+        --with-c++11 ) CXX_FLAGS="-std=gnu++11 -stdlib=libc++"
+                        CXX_LINK_FLAGS="-stdlib=libc++"
                     ;;
         clean ) CLEAN=1
                     ;;
